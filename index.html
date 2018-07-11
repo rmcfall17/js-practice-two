@@ -35,7 +35,11 @@
   return num;
 }
     function squareroot(num) {
-      return Math.pow(num, 0.5);
+      var x = num;
+      while (x > 1) {
+      num = Math.pow(x , 0.5);
+  }
+  return num
 }
     input.onchange = function() {
       var num = input.value;
@@ -45,7 +49,7 @@
     para.textContent = num + ' squared is ' + squared(num) + '. ' +
                        num + ' cubed is ' + cubed(num) + '. ' +
                        num + ' factorial is ' + factorial(num) + '.';
-                       num + ' squareroot is ' + squareroot(num) + '.' +
+                       num + ' squareroot is ' + squareroot(num) + '.';
   }
 }
   </script>
